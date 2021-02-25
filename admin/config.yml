@@ -10,6 +10,43 @@ media_folder: "assets/img/uploads" # Folder where user uploaded files should go
 publish_mode: editorial_workflow # Enable drafts
 
 collections: # A list of collections the CMS should be able to edit
+  - label: "Website settings"
+    name: "website-settings"
+    files:
+      - label: "Website settings"
+        name: "site"
+        file: "_data/site.yml"
+        fields:
+          - label: "Tel"
+            name: "tel"
+            widget: "string"
+          - label: "Tel display"
+            name: "tel_display"
+            widget: "string"
+          - label: "SEO"
+            name: "seo"
+            widget: "object"
+            fields:
+              - label: "Tagline"
+                name: "tagline"
+                widget: "string"
+          - label: "Location"
+            name: "location"
+            widget: "object"
+            fields:
+              - label: "Street address"
+                name: "street_address"
+                widget: "string"
+              - label: "Locality"
+                name: "locality"
+                widget: "string"
+              - label: "Region"
+                name: "region"
+                widget: "string"
+              - label: "Country"
+                name: "country"
+                widget: "string"
+
   # POSTS
   - name: "post" # Used in routes, ie.: /admin/collections/:slug/edit
     label: "Post" # Used in the UI, ie.: "New Post"
